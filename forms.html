@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text"/> <br/>
+        <input type="password" required/> <br/>
+        <input type="checkbox" /> <br/>
+        <input type="radio" name="gender"/>
+        <input type="radio" name="gender"/> <br>
+        <input type="number" min="1" max="10"/> <br/>
+        <input type="submit" value="OK"/> <br/>
+        <textarea rows="3" cols="64"></textarea> <br/>
+    </form>
+
+    <button type="button">Ok</button>
+    <button type="button" onclick="doSomething();">Apply</button>
+
+    <p>apa warna favoritmu</p>
+    <select>
+        <option>Merah</option>
+        <option>Biru</option>
+        <option>Kuning</option>
+    </select>
+
+    <p>apa makanan favoritmu</p>
+    <select>
+        <option>Telur gulung</option>
+        <option selected>Cilok</option>
+        <option>Bakso</option>
+    </select>
+
+    <p>
+        <label for="user">Username</label>
+        <input type="text" name="user">
+    </p>
+    <p>
+        <label for="pass">Password</label>
+        <input type="password" name="pass">
+    </p>
+
+    <fieldset>
+        <legend>data diri</legend>
+        <p>
+            <label for="nama">Nama</label>
+            <input type="text" name="nama">
+        </p>
+        <p>
+            <label for="usia">Usia</label>
+            <input type="number" name="usia">
+        </p>
+    </fieldset>
+</body>
+</html>
