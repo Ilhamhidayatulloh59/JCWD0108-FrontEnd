@@ -19,7 +19,8 @@ function App() {
   const keepLogin = async () => {
     try {
       const { data } = await Axios.get(`http://localhost:2000/users/${id}`)
-      dispatch(setValue(data))
+      dispatch(setValue)
+      console.log(data)
     } catch (err) {
       console.log(err);
     }
