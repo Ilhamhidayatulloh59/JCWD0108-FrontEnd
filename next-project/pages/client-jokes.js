@@ -1,0 +1,38 @@
+const { useState, useEffect } = require("react")
+
+const ClientJokes = () => {
+    const [data, setData] = useState([])
+    const getData = async () => {
+        try {
+            const response = await fetch(
+                "https://v2.jokeapi.dev/joke/Programming?type=twopart&idrange=0-10&amount=5"
+            )
+
+            const { jokes } = await response.json()
+            console.log(jokes)
+            setData(jokes)
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    useEffect(() => {
+        getData()
+    }, [])
+
+    return (
+        <main>
+            <h1>Here are some Jokes</h1>
+            <ul>
+                {data?.map(joke => {
+                    return (
+                        <li key={joke.id}>
+                            {joke.id}. {joke.setup} - {joke.delivery}
+                        </li>
+                    )
+                })}
+            </ul>
+        </main>
+    )
+}
+
+export default ClientJokes
